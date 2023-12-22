@@ -1,0 +1,135 @@
+/* Importación de fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+/* Estilos generales del cuerpo */
+body {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    background-color: #4c7b9d;
+    color: white;
+    background-image: url("./img/ciudad.png");
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    margin: 0;
+    padding-top: 120px;
+    padding-bottom: 320px;
+}
+
+/* Estilos del encabezado principal */
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #df3448;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    margin: 0 !important;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    font-family: "Lobster", cursive;
+}
+
+/* Estilos de encabezados secundarios */
+h2 {
+    color: #df3448;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px 0 20px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    font-family: "Lobster", cursive;
+    box-shadow: inset 3px 0px 0px rgba(128, 128, 128, 0.3);
+}
+
+/* Estilos de párrafos */
+p {
+    color: #001f3f;
+    justify-content: flex-start;
+    padding: 0px 20px 0px 20px;
+    box-shadow: inset 3px 0px 0px rgba(128, 128, 128, 0.3);
+}
+
+/* Estilos compartidos entre encabezados y párrafos */
+h2,
+p {
+    margin: 20px 10%;
+    background-color: #acdadc;
+    position: relative;
+}
+
+/* Estilos de pseudo-elementos para encabezados y párrafos */
+h2:first-of-type::before,
+h2::before,
+p::after,
+p:not(:first-child)::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background-color: #acdadc;
+    border-radius: 0px;
+    box-shadow: inset 3px 0px 0px rgba(128, 128, 128, 0.3);
+}
+
+h2:first-of-type::before {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: inset 3px 5px 0px rgba(128, 128, 128, 0.3);
+}
+
+h2::before {
+    top: -20px;
+    left: 0;
+}
+
+p::after {
+    bottom: -30px;
+    right: 0;
+    padding-top: 0px;
+}
+
+p:not(:first-child)::before {
+    top: -20px;
+    left: 0;
+}
+
+/* Estilos específicos para el primer párrafo después de cada título h2 */
+h2 + p {
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Estilos específicos para la primera letra de los párrafos */
+p:not(:first-of-type)::first-letter {
+    font-size: 1.5em;
+    font-family: "Lobster", cursive;
+}
+
+/* Estilos específicos para el último párrafo */
+p:last-of-type {
+    padding-bottom: 200px;
+    position: relative;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+p:last-of-type::after {
+    content: url("./img/gato.png");
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 0;
+    align-self: center;
+    height: 70%;
+    transform: scale(0.7);
+    box-shadow: none;
+}
